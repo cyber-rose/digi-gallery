@@ -6,8 +6,9 @@
 # define e = Character("Eileen")
 define r = Character('Receptionist', color="#34ebcc")
 
-define h = Character('Hannibal', color="#7e7d85")
-define e = Character('Eyve', color="#1d0587")
+# define h = Character('Hannibal', color="#7e7d85")
+# define e = Character('Eyve', color="#1d0587")
+define test = "hello"
 
 # The game starts here.
 
@@ -27,6 +28,7 @@ label start:
 
     "Welcome!"
 
+    $ guide = ""
 
     scene bg lobby
 
@@ -48,29 +50,46 @@ label start:
             jump eyve
 
     label tin:
-        
-        default persistent.guide = "hannibal"
+    
+        define h = Character('Hannibal', color="#7e7d85")
+        $ guide = h
 
         hide eyve happy
         hide receptionist happy
         show hannibal happy at center
 
-        h "Hello, my name is Tin-can-ibal and I'll be your guide today."
-        jump marry #required or else it'll go to label eyve, label marry...
+        guide "Hello, my name is Tin-can-ibal and I'll be your guide today."
+        jump ask
 
     label eyve:
 
-        default persistent.guide = "eyve"
+        define e = Character('Eyve', color="#1d0587")
+        $ guide = e
 
         hide hannibal happy
         hide receptionist happy
 
         show eyve happy at center
-        e "Hello, my name is Eyve and I'll be your guide today."
-        jump marry
+        guide "Hello, my name is Eyve and I'll be your guide today."
+        jump ask
 
-    label marry:
-        "So..."
+    label ask:
+        guide "Where do you want to go first? Please pick a genre:"
+        menu:
 
+            "Painting":
+                jump tbc
+
+            "Plants":
+                jump tbc
+
+            "People":
+                jump tbc
+            
+            "Misc":
+                jump tbc
+
+    label tbc:
+        "to be continued..."
     # This ends the game.
     return

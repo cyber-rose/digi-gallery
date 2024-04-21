@@ -38,7 +38,7 @@ label start:
 
     # These display lines of dialogue.
 
-    "Welcome to the Digital Gallery!"
+    "Welcome! Press enter, space, or left click to head inside the digital gallery."
 
     $ guide = "" #set the museum guide to no one
 
@@ -58,7 +58,11 @@ label start:
 
     "You head to the reception desk."
 
-    r "Hello, welcome to the digital museum! A place to uplift community and artists through digital spaces. Please choose your tour guide!"
+    r "Welcome to the DigiGallery: a digital space to uplift artists and build community."
+
+    r "Press H to hide the textbar and get a better look. There is certainly plenty of art to see!"
+
+    r "It seems a couple of our docents are free. Who would you like to show you around? I'll let them introduce themselves."
 
     #resize the sprites accordingly, receptionist is 743 pixels tall
     show tin-can-nibal at left with dissolve: 

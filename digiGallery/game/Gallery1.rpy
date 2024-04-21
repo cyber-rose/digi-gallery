@@ -4,6 +4,20 @@ define artist = "Artist Name"
 define handle = "@handle"
 
 label enter_gallery1:
+    scene image42201415392_109b3052b4_o with dissolve:
+        fit "fill"
+        xysize (1980, 1080)
+
+    if guide == e:
+        show eyve at left with dissolve: 
+            fit "contain"
+            ysize (743) 
+    if guide == h:
+        show tin-can-nibal at left with dissolve: 
+            fit "contain"
+            ysize (743) 
+
+
     "You enter Gallery 1 and see a bunch of offshooting hallways. You browse the artist name plaque overhead each one."
 
     guide "Which artist do you want to check out?"
@@ -106,5 +120,5 @@ screen imenu(*imgs):
                     action Return(i)
         hbox xalign 0.5 yalign 0.5:
             imagebutton:
-                    idle im.Scale(img, img_size,100)
+                    idle im.Scale("images/Back_Arrow.png", img_size,100)
                     action Jump("enter_gallery1")

@@ -27,8 +27,10 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene grandentrance:
-        fit "scale-up"
+    scene museumoutside:
+        fit "fill"
+        xysize (1980, 1080) 
+
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -45,7 +47,14 @@ label start:
 
     play music "audio/gallery-01-193541.mp3"
 
-    show receptionist
+    image receptionist desk = "images/sprites/Receptionist_desk_no_background.png"
+
+    show receptionist desk at center with dissolve:
+        fit "contain"
+        ysize (1000)
+
+    #receptionist with dissolve 
+    #Receptionist_desk_no_background #"images/Receptionist_desk_no_backRground.png"
 
     "You head to the reception desk."
 
@@ -83,7 +92,7 @@ label start:
         $ guide = h
 
         hide eyve
-        hide receptionist
+        hide receptionist desk
         show tin-can-nibal at center with move
 
         guide "Impeccable judgment. Seeds of wisdom shall proudly rise as we journey into these halls."
@@ -95,7 +104,7 @@ label start:
         $ guide = e
 
         hide tin-can-nibal
-        hide receptionist
+        hide receptionist desk
 
         show eyve at center with move
         guide "Hell yeah! Let's get a move on!"
@@ -110,8 +119,8 @@ label start:
             "Gallery1":
                 jump enter_gallery1
     
-            # "Gallery2":
-            #     jump enter_gallery2
+            "Gallery2":
+                jump enter_gallery2
 
     label tbc:
         "to be continued..."

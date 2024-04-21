@@ -112,7 +112,7 @@ label start:
 
     label ask:
         if guide == e:
-            e "So, anything catch your eye? Pick a genre, and I\'ll take ya there!"
+            e "So, anything catch your eye? I’ll tell ya all about it!"
         if guide == h:
             h "Select thy inquiry, and I will fish its history from the depths of my knowledge."
         menu:

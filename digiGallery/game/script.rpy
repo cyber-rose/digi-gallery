@@ -80,7 +80,6 @@ label start:
     #selected Hannibal as the guide
     label tin:
     
-        #define h = Character('Hannibal', color="#7e7d85")
         $ guide = h
 
         hide eyve
@@ -93,7 +92,6 @@ label start:
     #selected Eyve as the guide
     label eyve:
 
-        define e = Character('Eyve', color="#1d0587")
         $ guide = e
 
         hide hannibal
@@ -108,20 +106,12 @@ label start:
             "So, anything catch your eye? Pick a genre, and I\'ll take ya there!"
         if guide == h:
             "Select thy inquiry, and I will fish its history from the depths of my knowledge."
-        #guide "Where do you want to go first? Please pick a genre:"
         menu:
-
-            "Painting":
-                jump tbc
-
-            "Plants":
-                jump tbc
-
-            "People":
-                jump tbc
-            
-            "Misc":
-                jump tbc
+            "Gallery1":
+                jump enter_gallery1
+    
+            # "Gallery2":
+            #     jump enter_gallery2
 
     label tbc:
         "to be continued..."

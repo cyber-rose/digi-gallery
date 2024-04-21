@@ -52,13 +52,13 @@ label start:
     r "Hello, welcome to the digital museum! A place to uplift community and artists through digital spaces. Please choose your tour guide!"
 
     #resize the sprites accordingly, receptionist is 743 pixels tall
-    show hannibal at left with dissolve: 
+    show tin-can-nibal at left with dissolve: 
         fit "contain"
         ysize (743) 
 
-    define h = Character('Hannibal', color="#7e7d85")
+    define h = Character('Tin-can-nibal', color="#7e7d85")
 
-    h "I will either find art. Or I will make some. Pledge thyself to me: Tin-can-nnibal. Together we shall conquer a vast world of knowledge and art."
+    h "I will either find art. Or I will make some. Pledge thyself to me: Tin-can-nibal. Together we shall conquer a vast world of knowledge and art."
 
     #resize the sprites accordingly, receptionist is 743 pixels tall
     show eyve at right with dissolve:
@@ -71,7 +71,7 @@ label start:
 
     menu:
 
-        "Tin-can-ibal":
+        "Tin-can-nibal":
             jump tin
 
         "Eyve":
@@ -84,7 +84,7 @@ label start:
 
         hide eyve
         hide receptionist
-        show hannibal at center with move
+        show tin-can-nibal at center with move
 
         guide "Impeccable judgment. Seeds of wisdom shall proudly rise as we journey into these halls."
         jump ask
@@ -94,7 +94,7 @@ label start:
 
         $ guide = e
 
-        hide hannibal
+        hide tin-can-nibal
         hide receptionist
 
         show eyve at center with move
@@ -103,9 +103,9 @@ label start:
 
     label ask:
         if guide == e:
-            "So, anything catch your eye? Pick a genre, and I\'ll take ya there!"
+            e "So, anything catch your eye? Pick a genre, and I\'ll take ya there!"
         if guide == h:
-            "Select thy inquiry, and I will fish its history from the depths of my knowledge."
+            h "Select thy inquiry, and I will fish its history from the depths of my knowledge."
         menu:
             "Gallery1":
                 jump enter_gallery1

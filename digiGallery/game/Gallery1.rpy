@@ -4,10 +4,11 @@ $ artist = "Artist Name"
 $ handle = "@handle"
 
 label enter_gallery1:
-    scene image42201415392_109b3052b4_o with dissolve:
+    scene pexels-robin-schreiner-1188739-2261165 with dissolve:
         fit "fill"
         xysize (1980, 1080)
 
+    #show the choosen guide
     if guide == e:
         show eyve at left with dissolve: 
             fit "contain"

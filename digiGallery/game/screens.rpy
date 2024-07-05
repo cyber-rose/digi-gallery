@@ -566,6 +566,7 @@ screen about():
             text _("Made with {a=https://www.renpy.org/}Ren'Py{/a} [renpy.version_only].\n\n[renpy.license!t]")
 
 
+
 style about_label is gui_label
 style about_label_text is gui_label_text
 style about_text is gui_text
